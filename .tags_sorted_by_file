@@ -6,11 +6,15 @@
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
 about	app/controllers/static_pages_controller.rb	/^  def about$/;"	f	class:StaticPagesController
+contact	app/controllers/static_pages_controller.rb	/^  def contact$/;"	f	class:StaticPagesController
 help	app/controllers/static_pages_controller.rb	/^  def help$/;"	f	class:StaticPagesController
 home	app/controllers/static_pages_controller.rb	/^  def home$/;"	f	class:StaticPagesController
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+full_title	app/helpers/application_helper.rb	/^  def full_title(page_title)$/;"	f	class:ApplicationHelper
 StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SampleApp
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-about	public/index.html	/^      function about() {$/;"	f
