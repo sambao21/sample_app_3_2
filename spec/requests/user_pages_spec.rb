@@ -46,6 +46,10 @@ describe "User pages" do
           expect { click_link('delete') }.to change(User, :count).by(-1)
         end
         it { should_not have_link('delete', href: user_path(admin)) }
+
+        it "should not be able to delete yourself" do
+          expect { delete user_path(admin.id) }.to_not change(User, :count)
+        end
       end
     end
   end
@@ -82,7 +86,7 @@ describe "User pages" do
         fill_in "Name",         with: "Example User"
         fill_in "Email",        with: "user@example.com"
         fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "Confirm Password", with: "foobar"
       end
 
       it "should create a user" do
@@ -96,6 +100,11 @@ describe "User pages" do
         it { should have_selector('title', text: user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
         it { should have_link('Sign out') }
+
+        describe "should not be able to create another user" do
+          before { visit signup_path }
+          it { should have_content('This is the home page for the Ruby on Rails Tutorial sample application.') }
+        end
       end
     end
 
