@@ -1,1 +1,1 @@
-rvm use 1.9.3@rails3tutorial2ndEd
+rvm use 1.9.3@rails3tutorial2ndEd --create
